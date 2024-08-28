@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/login-signup.css">
+    <title>Blogify | Signup</title>
+</head>
+<body>
+    <main class="signup">
+      <form action="/user/signup" id="userForm" method="post" enctype="multipart/form-data">
+        <h1>Create an Account!</h1>
+        <div class="inputs">
+            <label for="">First Name</label>
+            <input type="text" name="fName" required placeholder="Enter First Name">
+        </div>
+        <div class="inputs">
+            <label for="">Last Name</label>
+            <input type="text" name="lName" required placeholder="Enter Last Name">
+        </div>
+        <div class="inputs">
+            <label for="">Email Name</label>
+            <input type="email" name="email" required placeholder="Enter Email">
+        </div>
+        <div class="inputs">
+            <label for="">Password</label>
+            <input type="password" name="password" required placeholder="Enter Password">
+        </div>
+        <div class="inputs">
+            <label for="">Confirm Password</label>
+            <input type="password" required placeholder="Confirm Password">
+        </div>
+        <div class="inputs">
+            <label for="">Profile Image (Optional)</label>
+            <input type="file" id="fileInput" name="profileImg">
+            <button class="imgBtn" id="imgBtn" type="button" onclick="document.getElementById('fileInput').click()">
+                Choose Image
+            </button>
+            <div class="imgContainer hidden" id="imgContainer">
+                <i class="fa-solid fa-xmark" id="rmImg"></i>
+            </div>
+        </div>
+        <button type="submit" id="form">Sign Up</button>
+        <p>Already Have an Account? <a href="">Sign in</a></p>
+      </form>
+    </main>
+    <script src="/signup.js">
+        
+        
+    </script>
+    <script src="https://kit.fontawesome.com/3fda0b5bca.js" crossorigin="anonymous"></script>
+</body>
+</html>

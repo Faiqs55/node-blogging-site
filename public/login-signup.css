@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 62.5%;
+}
+body{
+    font-family: sans-serif;
+}
+.signup{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.5),rgba(0,0,0,0.5)), 
+    url('/statics/login-bg.jpeg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signup form{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 2em 3em;
+    border-radius: 5px;
+    width: 35%;
+    gap: 1.5em;
+}
+.signup form h1{
+    align-self: center;
+    margin-bottom: 1em;
+    font-size: 2.4rem;
+}
+.signup form .inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+.signup form .inputs label{
+    font-size: 1.4rem;
+    color: #666;
+}
+.signup form .inputs input{
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    padding: 0.3em;
+}
+.signup form button{
+    font-size: 1.6rem;
+    padding: 0.5em 0;
+    font-weight: bold;
+    color: white;
+    background-color: #eb5e3b;
+    cursor: pointer;
+    margin-top: 1em;
+}
+.signup form p{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #666;
+}
+.signup form p a{
+    color: #eb5e3b;
+}
+input#fileInput{
+    display: none;
+}
+.imgBtn{
+    align-self: center;
+    padding: 0.5em 1em !important;
+    border-radius: 5px;
+    font-weight: 300 !important;
+    background-color: #3c70ff !important;
+}
+.imgContainer{
+    height: 90px;
+    width: 90px;
+    align-self: center;
+    margin: 1em 0;
+    display: flex;
+    flex-direction: column;
+}
+.imgContainer img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 2px solid #eb5e3b;
+}
+i{
+    font-size: 2rem;
+    color: #eb5e3b;
+    font-weight: bold;
+    align-self: self-end;
+    cursor: pointer;
+}
+.hidden{
+    display: none !important;
+}
