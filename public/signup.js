@@ -18,9 +18,6 @@ let input = document.getElementById('fileInput');
             input.value = null;
             imgCon.classList.add('hidden');
         });
-
-        // document.getElementById('form').addEventListener('click', function(e){
-        //     e.preventDefault()
-        //     console.dir(document.getElementById('userForm'));
-        //     // console.log('aloo');
-        // })
+        document.getElementById('form').addEventListener('submit', function(){
+            document.getElementById('userFrom').reset();
+        })

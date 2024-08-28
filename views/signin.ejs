@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/login-signup.css">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/login-signup.css">
+    <title>Blogify | Signup</title>
+</head>
+<body>
+    <main class="signup">
+      <form action="/user/login" id="userForm" method="post">
+        <h1>Login to you Account</h1>
+        <div class="inputs">
+            <label for="">Email</label>
+            <input type="email" name="email" required placeholder="Enter Email">
+        </div>
+        <div class="inputs">
+            <label for="">Password</label>
+            <input type="password" name="password" required placeholder="Enter Password">
+        </div>
+        <p class="error"><%= locals?.error %></p>
+        <button type="submit" id="form">Sign Up</button>
+        <p>Create an Account? <a href="/user/signup">Sign up</a></p>
+      </form>
+    </main>
+    <script src="https://kit.fontawesome.com/3fda0b5bca.js" crossorigin="anonymous"></script>
+</body>
+</html>
+</body>
+</html>

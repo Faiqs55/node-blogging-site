@@ -1,30 +1,15 @@
 const express = require('express');
-const { renderSignUp } = require('../controllers/user');
+const { renderSignUp, userSignUp, renderSignin, userLogin, userLogout } = require('../controllers/user');
 const userRouter = express.Router();
 const upload = require('../middlewares/multer');
-const { uploader } = require('../middlewares/cloudinary');
-const UserModel = require('../models/user');
+const { checkLogin } = require('../middlewares/auth');
 
-userRouter.get('/signup', renderSignUp);
-userRouter.post('/signup', upload.single('profileImg') ,async(req, res) => {
-    let data = req.body;
-    if(req.file){
-        let result = await uploader.upload(req.file.path);
-        data = {
-        ...data,
-        profileImg: result.secure_url
-    };
-    }
-    
-    try {
-        let user = await UserModel.create(data);
-        console.log(user);
-        res.redirect('/');
-    } catch (error) {
-        if(error.code == 11000){
-            res.render('signup', {e: 'Email Already Exists'});
-        }
-    }
-});
+userRouter.get('/signup', checkLogin,renderSignUp);
+userRouter.post('/signup', upload.single('profileImg'), userSignUp);
+
+userRouter.get('/login', checkLogin, renderSignin)
+userRouter.post('/login', userLogin)
+
+userRouter.get('/logout', userLogout)
 
 module.exports = userRouter;

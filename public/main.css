@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+.navbar{
+    display: flex;
+    overflow: hidden;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    justify-content: space-between;
+    padding: 0 10em;
+    align-items: center;
+    background-color: aliceblue;
+    width: 100%;
+    transition: all 300ms ease;
+    position: fixed;
+}
+.navlinks{
+    display: flex;
+    list-style: none;
+    gap: 1em;
+}
+.navlinks li a{
+    text-decoration: none;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+nav h1{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+}
+.actions{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.img{
+    height: 35px;
+    width: 35px;
+    overflow: hidden;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid black;
+}
+.img img{
+    height: 100%;
+    width: 100%;
+}
+.search{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    border: 1px solid rgb(147, 147, 147);
+    background-color: white;
+    padding: 0 2em;
+    border-radius: 20px;
+}
+.search i{
+    font-size: 1.7rem;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+}
+.search input{
+    font-size: 1.5rem;
+    padding: 0.5em;
+    background-color: transparent;
+    transition: all 500ms ease;
+    width: 100%;
+}
+.controls{
+    background-color: aliceblue;
+    width: 10%;
+    height: 100vh;
+    position: fixed;
+    right: -200px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(111, 188, 255);
+    transition: all 300ms ease;
+}
+.controls ul{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    list-style: none;
+    margin-top: 5em;
+}
+.controls ul li{
+    text-align: center;
+}
+.controls ul li a{
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    border-bottom: 0.5px solid #ffffff;
+    padding: 1em 0;
+}
+.width-95{
+    width: 95% !important;
+}
+.show-controls{
+    right: 0;
+}

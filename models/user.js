@@ -46,22 +46,14 @@ userSchema.pre('save', function(next){
 // STATIC VIRTUAL FUNCTIONS 
 userSchema.static('userLogin', async function(email, password){
     let user = await this.findOne({email});
-    if(!user) return new Error("No user Exists with this Email");
+    if(!user) return {error: 'Invalid Email Address'};
 
     let userPass = user.password;
     let salt = user.salt;
     let userGivenPass = createHmac('sha256', salt).update(password).digest('hex');
-    if(userGivenPass !== userPass) return new Error("Incorrect Password");
+    if(userGivenPass !== userPass) return {error: 'Incorrect password'};
 
-    return {
-        _id: user._id,
-        fullName: user.fullName,
-        email: user.email,
-        profileImg: user.profileImg,
-        role: user.role,
-        createdAt: user.createdAt,
-        updatedAt: user.updatedAt
-    };
+    return user;
 });
 
 

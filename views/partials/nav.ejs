@@ -1,0 +1,39 @@
+<div class="navbar">
+    <nav id="mainNav">
+        <ul class="navlinks">
+            <li><a href="">All posts</a></li>
+            <li><a href="">Trending</a></li>
+            <li><a href="">Categories</a></li>
+        </ul>
+        <h1>Blogify</h1>
+        <div class="actions">
+            <div class="search">
+                <input type="text" placeholder="Search By Title" id="sInput">
+                <i class="fa-solid fa-magnifying-glass" id="sIcon"></i>
+            </div>
+            <div class="img" id="imgIcon">
+                <img src="<%- locals?.user.profileImg %>" alt="">
+            </div>
+        </div>
+    </nav>
+    <div class="controls" id="controls">
+        <ul>
+            <li><a href="">Profile</a></li>
+            <li><a href="">My Posts</a></li>
+            <li><a href="">Add Post</a></li>
+            <li><a href="/user/logout" id="logout">Logout</a></li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    let img = document.getElementById('imgIcon');
+    let nav = document.getElementById('mainNav');
+    let logout = document.getElementById('logout');
+    let controls = document.getElementById('controls');
+    img.addEventListener('click', function(){
+        nav.classList.toggle('width-95');
+        controls.classList.toggle('show-controls');
+    });
+
+</script>
