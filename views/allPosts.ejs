@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <%- include('partials/nav') %>
+    <main class="main">
+        <div class="container">
+            <% locals.blogs.forEach(element => { %>
+                <a href="/blogs/<%- element._id %>" class="card">
+                    <img src="<%- element.imgUrl %>" alt="">
+                    <span class="cat"><%- element.category %></span>
+                    <h2 class="title" ><%- element.title %></h2>
+                    <div class="author">
+                     <img src="<%- element.authorImg %>" alt="">
+                     <p>By <span class="name"><%- element.authorName %></span></p>
+                    </div>
+                 </a>
+            <% }) %>
+        </div>
+    </main>
+</body>
+</html>

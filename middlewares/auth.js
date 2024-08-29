@@ -9,6 +9,7 @@ async function checkAuth(req, res, next){
         let user = await UserModel.findById(userID.id);
         if(user){
             req.userID = userID.id;
+            req.user = user;
             next();
         }else{
             res.redirect('/user/login');

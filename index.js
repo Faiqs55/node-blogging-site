@@ -7,6 +7,7 @@ const dotenv = require('dotenv');
 const cookieParser = require('cookie-parser');
 const { checkAuth, checkLogin } = require('./middlewares/auth');
 const UserModel = require('./models/user');
+const blogsRouter = require('./routes/blogs');
 
 // VARIABLES AND CALLS 
 const app = express();
@@ -26,6 +27,7 @@ app.get('/', checkAuth , async (req, res) => {
     let user = await UserModel.findById(req.userID);
     res.render('home', {user});
 });
+app.use('/blogs', checkAuth, blogsRouter);
 app.use('/user', userRouter);
 
 // LISTENING 

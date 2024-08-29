@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
+    <title>Add Blog</title>
+</head>
+<body>
+    <%- include('partials/nav') %>
+    <main class="main">
+      <h1>Add a new Blog!</h1>
+      <form action="/blogs/add" method="post" enctype="multipart/form-data">
+        <div class="inputs">
+            <input type="text" name="title" placeholder="Title for your Blog" required>
+        </div>
+        <div class="inputs">
+            <select id="" required name="category">
+                <option value="" disabled selected>Select Category</option>
+                <option value="Technology">Technology</option>
+                <option value="Sports">Sports</option>
+                <option value="Politics">Politics</option>
+                <option value="Education">Education</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        <div class="inputs">
+            <input name="imgUrl" type="file" style="display: none;" id="imgInput">
+            <button id="imgSelect" type="button">Select Title Image</button>
+            <div id="imgCon">
+
+            </div>
+        </div>
+        <div class="inputs">
+            <textarea name="desc" id="" placeholder="Add descroption" required></textarea>
+        </div>
+        <button type="submit" id="submit">Upload!</button>
+      </form>
+    </main>
+
+    <script>
+           let btn = document.getElementById('imgSelect');
+           let input = document.getElementById('imgInput');
+           let hidden = document.getElementById('hiddenInput');
+           let imgCon = document.getElementById('imgCon');
+           let submit = document.getElementById('submit');
+           
+           btn.addEventListener('click', function(){
+               input.click();
+           });
+           input.addEventListener('change', function(){
+            let url = URL.createObjectURL(input.files[0]);            
+            let img = document.createElement('img');
+            img.src = url;
+            img.id = 'userImg';
+            imgCon.appendChild(img);
+           });
+    </script>
+
+</body>
+</html>

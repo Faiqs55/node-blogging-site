@@ -5,7 +5,7 @@ let input = document.getElementById('fileInput');
             let imgCon = document.getElementById('imgContainer');
             imgCon.classList.remove('hidden');
             let url = URL.createObjectURL(document.getElementById('fileInput').files[0]);
-            let img = document.createElement('img');
+            let img = document.createElement('img');            
             img.src = url;
             img.id = 'userImg';
             imgCon.appendChild(img);

@@ -12,7 +12,7 @@
 
 body{
     font-family: sans-serif;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .navbar{
@@ -123,4 +123,132 @@ nav h1{
 }
 .show-controls{
     right: 0;
+}
+
+.main{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 12vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    background-color: rgb(240, 240, 240);
+    padding: 3.5rem;
+}
+.main h1{
+    font-size: 3rem;
+    font-weight: 300;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: #444;
+    border-bottom: 2px solid rgb(255, 64, 64);
+}
+
+.main form{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+    gap: 1.5rem;
+}
+.inputs{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.inputs input{
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 0.5em;
+}
+.inputs textarea{
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 150px;
+    max-height: 150px;
+    font-size: 1.6rem;
+    padding: 0.5em;
+}
+.inputs select{
+    font-size: 1.6rem;
+    padding: 0.5em;
+}
+.main form button{
+    font-size: 1.6rem;
+    padding: 0.5em;
+    font-weight: bold;
+    color: white;
+    background-color: #eb5e3b;
+    cursor: pointer;
+}
+.main form .inputs button{
+    background-color: #4e6eff;
+}
+#imgCon{
+    display: flex;
+    justify-content: center;
+}
+#imgCon img{
+    height: 200px;
+    padding: 2em;
+    max-width: 100%;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 2.5em;
+}
+.card{
+    width: 25%;
+    padding: 1em;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    text-decoration: none;
+    transition: all 300ms ease;
+}
+.title{
+    color: black;
+    font-size: 2rem;
+    font-weight: 300;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.cat{
+    font-size: 1.5rem;
+    color: white;
+    background-color: #eb5e3b;
+    align-self: self-start;
+    padding: 0.5em;
+    border-radius: 5px;
+}
+.card img{
+    width: 100%;
+    border-radius: 10px;
+}
+.author img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.author {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.author p{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #777;
+}
+.author p span{
+    color: #444;
+}
+.card:hover{
+    transform: scale(1.1);
 }

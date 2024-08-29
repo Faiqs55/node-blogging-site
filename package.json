@@ -10,6 +10,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@editorjs/editorjs": "^2.30.5",
     "cloudinary": "^2.4.0",
     "cookie-parser": "^1.4.6",
     "cookieparser": "^0.1.0",
@@ -19,6 +20,7 @@
     "firebase-admin": "^12.4.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.5.3",
-    "multer": "^1.4.5-lts.1"
+    "multer": "^1.4.5-lts.1",
+    "tinymce": "^7.3.0"
   }
 }
